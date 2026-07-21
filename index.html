@@ -247,13 +247,23 @@ td input,td select{border:none;width:100%;font-size:12px;background:transparent;
 <!-- JOB REQUIREMENTS -->
 <div class="section-title">Job Requirements</div>
 <div class="radio-row">
-  <label>Intended Post <span style="color:red">*</span></label>
+  <label>Intended Post <span style="color:red">*</span> <span style="font-weight:400;color:#888">(tick any that apply)</span></label>
   <div class="cb-group" id="postGroup">
+    <div style="width:100%;font-weight:700;color:#1b5e20;margin:2px 0 4px">A. Operations</div>
     <label><input type="checkbox" name="post" value="Childcare Mentor"> Childcare Mentor</label>
     <label><input type="checkbox" name="post" value="Kindergarten Teacher"> Kindergarten Teacher</label>
-    <label><input type="checkbox" name="post" value="Infant Childcare Mentor"> Infant Childcare Mentor</label>
-    <label><input type="checkbox" name="post" value="Office"> Office</label>
-    <label><input type="checkbox" name="post" value="Others"> Others: <input type="text" id="postOther" style="width:100px;border:none;border-bottom:1px solid #555;margin-left:4px"></label>
+    <label><input type="checkbox" name="post" value="Infant Childcare"> Infant Childcare</label>
+    <label><input type="checkbox" name="post" value="Playgroup Mentor"> Playgroup Mentor</label>
+    <label><input type="checkbox" name="post" value="Others (Operations)"> Others: <input type="text" id="postOtherOps" style="width:110px;border:none;border-bottom:1px solid #555;margin-left:4px"></label>
+    <div style="width:100%;font-weight:700;color:#1565c0;margin:8px 0 4px">B. Office</div>
+    <label><input type="checkbox" name="post" value="Management"> Management</label>
+    <label><input type="checkbox" name="post" value="HR"> HR</label>
+    <label><input type="checkbox" name="post" value="Admin"> Admin</label>
+    <label><input type="checkbox" name="post" value="Account"> Account</label>
+    <label><input type="checkbox" name="post" value="Account & Payroll"> Account &amp; Payroll</label>
+    <label><input type="checkbox" name="post" value="Content Creator"> Content Creator</label>
+    <label><input type="checkbox" name="post" value="Marketing"> Marketing</label>
+    <label><input type="checkbox" name="post" value="Others (Office)"> Others: <input type="text" id="postOther" style="width:110px;border:none;border-bottom:1px solid #555;margin-left:4px"></label>
   </div>
 </div>
 <div class="radio-row">
@@ -458,7 +468,7 @@ td input,td select{border:none;width:100%;font-size:12px;background:transparent;
 <script>
 
 // ── VERSION (update only via UVN command) ──────────────────────────────────
-var FORM_VERSION = 'MEG-EAF-Applicant v.2026.07.20-15:00';
+var FORM_VERSION = 'MEG-EAF-Applicant v.2026.07.21-23:00';
 
 
 // ── CONFIG (Supabase backend) ────────────────────────────────────────────────
@@ -750,7 +760,7 @@ function collectFormData(){
   var d={};
   ['appDate','nameChinese','nameEnglish','ic1','ic2','ic3','passport','dob',
    'children','maritalOther','raceOther','religionOther','addr1','addr2','addr3','postcodeTown','addrState','contact','email',
-   'postOther','workHourOther','workFrom','workTo','startDate','salary',
+   'postOther','postOtherOps','workHourOther','workFrom','workTo','startDate','salary',
    'spokenOther','writtenOther','specialSkills','yesDetails',
    'relName','relRelationship','relDept','relJobTitle',
    'declName','declDate','interviewedBy','interviewedBy2','decision','finalSalary',
@@ -792,7 +802,7 @@ function collectFormData(){
 function restoreFormData(d){
   ['appDate','nameChinese','nameEnglish','ic1','ic2','ic3','passport','dob',
    'children','maritalOther','raceOther','religionOther','addr1','addr2','addr3','postcodeTown','addrState','contact','email',
-   'postOther','workHourOther','workFrom','workTo','startDate','salary',
+   'postOther','postOtherOps','workHourOther','workFrom','workTo','startDate','salary',
    'spokenOther','writtenOther','specialSkills','yesDetails',
    'relName','relRelationship','relDept','relJobTitle',
    'declName','declDate','interviewedBy','interviewedBy2','decision','finalSalary',
